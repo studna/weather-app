@@ -2,6 +2,7 @@
   "name": "weather",
   "version": "0.1.0",
   "private": true,
+  "license": "ISC",
   "dependencies": {
     "countries-and-timezones": "^1.0.1",
     "fela-plugin-custom-property": "^10.6.1",
@@ -23,8 +24,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "postinstall": "git clone git@github.com:facebook/react.git --depth=1 && cd react && yarn install --frozen-lockfile && npm run build react-cache && cd .. && npm i $(npm pack ./react/build/node_modules/react-cache) && rm -rf react react-cache-*.tgz"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"

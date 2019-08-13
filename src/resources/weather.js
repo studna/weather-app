@@ -1,5 +1,5 @@
 import { unstable_createResource } from "react-cache";
-import { assoc, values } from "ramda";
+import { values } from "ramda";
 
 const fetchWeather = latlng => {
   return fetch(
