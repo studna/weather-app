@@ -296,13 +296,13 @@ const WeatherInfoPanelTile = ({ title, icon, value }) => (
 );
 
 const WeatherCard = ({ details, location }) => {
-  const theme = getApplicationTheme(head(details.weather).main);
-
   const tz = head(
     ct.getTimezonesForCountry(location.countryCode.toUpperCase())
   );
 
   moment.tz.setDefault((tz && tz.name) || "Europe/Prague");
+
+  const theme = getApplicationTheme(head(details.weather).main);
 
   return (
     <div>
@@ -333,21 +333,21 @@ function getWeatherIcon(conditions) {
   const timeOfDay = getCurrentTimeOfDay();
 
   switch (conditions) {
-    default:
-      return `wi-${timeOfDay.toLowerCase()}-${
-        timeOfDay === TIME_OF_DAY.DAY ? "sunny" : "clear"
-      }`;
     case WEATHER_CONDITIONS.CLOUDS:
       return `wi-${timeOfDay.toLowerCase()}-cloudy`;
     case WEATHER_CONDITIONS.RAIN:
       return `wi-${timeOfDay.toLowerCase()}-rain`;
     case WEATHER_CONDITIONS.SNOW:
       return `wi-${timeOfDay.toLowerCase()}-snow`;
+    default:
+      return `wi-${timeOfDay.toLowerCase()}-${
+        timeOfDay === TIME_OF_DAY.DAY ? "sunny" : "clear"
+      }`;
   }
 }
 
 function getCurrentTimeOfDay() {
-  const currentTime = new Date().getHours();
+  const currentTime = moment().hours();
   const isNight = time => time >= 20 || time <= 4;
 
   return isNight(currentTime) ? TIME_OF_DAY.NIGHT : TIME_OF_DAY.DAY;
