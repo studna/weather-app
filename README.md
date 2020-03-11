@@ -10,3 +10,4 @@ You can visit project online on [https://weather.studna.now.sh](https://weather.
 - Moment Timezone for displaying local time according selected city
 - Ramda for simplicity and immutability
 - `WeatherCard` UX component was originally designed by https://codepen.io/pbmchc/pen/byxPzz
+
