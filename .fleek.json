@@ -1,7 +1,7 @@
 {
   "build": {
     "image": "node:alpine",
-    "command": "npm install && npm run start && echo $SUCCESS_ENV",
+    "command": "npm install && npm run build && echo $SUCCESS_ENV",
     "publicDir": "build",
     "environment": {
       "SUCCESS_ENV": "Build finished! Awesome file configuration works..."
