@@ -11,7 +11,7 @@
     "fela-plugin-named-keys": "^10.6.1",
     "fela-plugin-prefixer": "^10.6.1",
     "moment": "^2.24.0",
-    "moment-timezone": "^0.5.26",
+    "moment-timezone": "^0.5.35",
     "places.js": "^1.16.4",
     "ramda": "^0.26.1",
     "react": "^16.9.0",
